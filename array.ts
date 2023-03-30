@@ -7,6 +7,9 @@ type ArrayKeys = keyof [];
  */
 export type IsArray<T> = T extends object ? ArrayKeys extends Extract<keyof T, ArrayKeys> ? true : false : false;
 
+/**
+ * Whether the given `Value` array type includes `Item`
+ */
 export type Includes<Value extends readonly any[], Item> = Value extends readonly [Value[0], ...infer rest]
   ? IsEqual<Value[0], Item> extends true ? true
   : Includes<rest, Item>

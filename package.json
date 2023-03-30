@@ -1,5 +1,5 @@
 {
-  "name": "types",
-  "description": "$QUACKWRE_PACKAGE_DESCRIPTION",
+  "name": "@quackware/types",
+  "description": "Types and type helpers",
   "version": "0.0.1"
 }
