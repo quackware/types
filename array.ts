@@ -14,3 +14,6 @@ export type Includes<Value extends readonly any[], Item> = Value extends readonl
   ? IsEqual<Value[0], Item> extends true ? true
   : Includes<rest, Item>
   : false;
+
+/** An array type with at least one item */
+export type NonEmptyArray<T> = [T, ...T[]];
