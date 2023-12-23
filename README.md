@@ -1,7 +1,3 @@
-<h1 align="center">
-  <a href="https://github.com/quackware/types">
-    <code>@quackware/types</code>
-  </a>
-</h1>
+# @quackware/types
 
-<p align="center">Types and type helpers</p>
+Types and type helpers

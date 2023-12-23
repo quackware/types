@@ -6,7 +6,7 @@ export type Constructor<T, Arguments extends unknown[] = any[]> = new(
 ) => T;
 
 /** Type representation for a class. */
-export type Class<T, Arguments extends unknown[] = any[]> =
+export type Class<T = any, Arguments extends unknown[] = any[]> =
   & Constructor<T, Arguments>
   & { prototype: T };
 
@@ -17,3 +17,8 @@ export type Class<T, Arguments extends unknown[] = any[]> =
  */
 // deno-lint-ignore ban-types
 export type GenericConstructor<T = {}> = new(...args: any[]) => T;
+
+export type ClassInstances<T> = {
+  [P in keyof T]: T[P] extends Class ? InstanceType<T[P]>
+    : never;
+};
